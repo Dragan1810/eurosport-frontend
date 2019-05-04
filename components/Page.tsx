@@ -15,7 +15,7 @@ const theme = {
 
 const StyledPage = styled.div`
   background: white;
-  color: ${props => props.theme.black};
+  color: #393939;
 `;
 
 /* 
@@ -54,23 +54,22 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${props => props.theme.black}
+    color: #393939
   }
 
-`
+`;
 
-const Page:FunctionComponent<{}> = ({children}) => ( 
-      <ThemeProvider theme={theme}>
-      <>
-      <GlobalStyle/>
-        <StyledPage>
-          <Meta />
-          <Header />
-          {children}
-        </StyledPage>
-      </>
-      </ThemeProvider>
-    );
- 
+const Page: FunctionComponent<{}> = ({ children }) => (
+  <ThemeProvider theme={theme}>
+    <>
+      <GlobalStyle />
+      <StyledPage>
+        <Meta />
+        <Header />
+        {children}
+      </StyledPage>
+    </>
+  </ThemeProvider>
+);
 
 export default Page;
