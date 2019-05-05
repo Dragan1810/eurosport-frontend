@@ -9,7 +9,6 @@ import CartCount from './CartCount';
 const Nav = () => (
   <User>
     {({ data }) => {
-      console.log(data);
       const me = data ? data.me : null;
       return (
         <NavStyles data-test="nav">

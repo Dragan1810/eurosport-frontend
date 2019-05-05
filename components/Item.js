@@ -5,7 +5,8 @@ import ItemStyles from './styles/ItemStyles';
 import PriceTag from './styles/PriceTag';
 import formatMoney from '../lib/formatMoney';
 import DeleteItem from './DeleteItem';
-import AddToCart from './AddtoCart';
+// import AddToCart from './AddtoCart';
+import User from './User';
 
 export default class Item extends React.Component {
   render() {
@@ -25,19 +26,27 @@ export default class Item extends React.Component {
         </Title>
         <PriceTag>{formatMoney(item.price)}</PriceTag>
         <p>{item.description}</p>
-        <div className="buttonList">
-          <Link
-            href={{
-              pathname: 'update',
-              query: { id: item.id }
-            }}
-          >
-            <a>Edit ✏️</a>
-          </Link>
+        <User>
+          {({ data }) => {
+            return (
+              data.me && (
+                <div className="buttonList">
+                  <Link
+                    href={{
+                      pathname: 'update',
+                      query: { id: item.id }
+                    }}
+                  >
+                    <a>Edit ✏️</a>
+                  </Link>
 
-          <AddToCart id={item.id} />
-          <DeleteItem id={item.id}>Delete This Item</DeleteItem>
-        </div>
+                  {/* <AddToCart id={item.id} /> */}
+                  <DeleteItem id={item.id}>Delete This Item</DeleteItem>
+                </div>
+              )
+            );
+          }}
+        </User>
       </ItemStyles>
     );
   }

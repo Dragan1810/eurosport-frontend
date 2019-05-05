@@ -18,16 +18,6 @@ const StyledPage = styled.div`
   color: #393939;
 `;
 
-/* 
-const Inner = styled.div`
-  max-width: ${props => props.theme.maxWidth};
-  margin: 0 auto;
-  padding: 2rem;
-  background: ${props => props.theme.red};
-`;
-
-*/
-
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'radnika_next';
