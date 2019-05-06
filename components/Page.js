@@ -49,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
 
 `;
 
-const Page: FunctionComponent<{}> = ({ children }) => (
+const Page = ({ children }) => (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
