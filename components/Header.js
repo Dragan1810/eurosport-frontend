@@ -4,7 +4,6 @@ import Router from 'next/router';
 import styled from 'styled-components';
 import NProgress from 'nprogress';
 
-// import Cart from './Cart';
 // import Search from './Search';
 
 Router.onRouteChangeStart = () => {
@@ -21,7 +20,7 @@ Router.onRouteChangeError = () => {
 
 const Logo = styled.h1`
   font-size: 2.8rem;
-  margin-left: 2rem;
+  margin-left: 1.5rem;
   postion: relative;
   z-index: 2;
   transform: skew(-7deg);
@@ -32,11 +31,6 @@ const Logo = styled.h1`
     color: white;
     text-transform: uppercase;
     text-decoration: none;
-  }
-
-  @media (max-width: 1300px) {
-    margin: 0;
-    text-align: center;
   }
 `;
 
@@ -64,16 +58,14 @@ const Header = () => (
   <StyledHeader>
     <div className="bar">
       <Logo>
-        <Link href="/items">
+        <Link href="/">
           <a>EuroSport</a>
         </Link>
       </Logo>
 
       <Nav />
     </div>
-    <div style={{ paddingBottom: 20 }} className="sub-bar">
-      {/* <Search /> */}
-    </div>
+    <div style={{ paddingBottom: 20 }} className="sub-bar" />
     {/* <Cart /> */}
   </StyledHeader>
 );

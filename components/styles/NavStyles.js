@@ -5,10 +5,10 @@ const NavStyles = styled.ul`
   padding: 0;
   display: flex;
   justify-self: end;
-  font-size: 2rem;
+  font-size: 1.6rem;
   a,
   button {
-    padding: 1rem 3rem;
+    padding: 0.8rem 2rem;
     display: flex;
     align-items: center;
     position: relative;
@@ -51,16 +51,10 @@ const NavStyles = styled.ul`
       &:after {
         width: calc(100% - 60px);
       }
-    @media (max-width: 700px) {
+      @media (max-width: 700px) {
         width: calc(100% - 10px);
+      }
     }
-    }
-  }
-  @media (max-width: 1300px) {
-    border-top: 1px solid ${props => props.theme.lightgrey};
-    width: 100%;
-    justify-content: center;
-    font-size: 1.5rem;
   }
 `;
 
